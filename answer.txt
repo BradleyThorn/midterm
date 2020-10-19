@@ -1,0 +1,116 @@
+1. Karel the Robot
+
+	public void run()
+	{
+	//assume I have a turn right method that calls turnLeft 3 times
+		turnLeft();
+		move();
+		turnRight();
+		for(int x = 0; x < 4; x++)
+		{
+			move();
+			while (frontIsClear())
+			{
+				if(noBeepersPresent())
+				{
+					putBeeper();
+				}
+				move();
+			}
+			turnLeft();
+			turnLeft();
+			move();
+			turnRight();
+		}
+	
+*************************************************************		
+
+2. Simple Java expressions
+
+	2a.) 1.25, false, B84 (as string)
+	2b.)"The 1st number is: 78"
+	    "The 2nd number is: 73"
+	    
+*************************************************************
+	
+3. Simple Java programs
+
+	private static final int SENTINEL = 0;
+	public void run()
+	{
+		int first = 0;
+		int second = 0;
+		Scanner input = new Scanner(System.in);
+		while(true)
+		{
+			int num = input.nextInt();
+			if (num == 0) break;
+			if (num > first)
+			{
+				second = first;
+				first = num;
+			}
+			else if(num > second)
+			{
+				second = num;
+			}
+		}
+		System.out.println("The largest value is " + first);
+		System.out.println("The second largest values is " + second);
+	}
+	
+**************************************************************
+
+4. Graphics and random numbers
+	
+	public static final int SQSIZE = 75;
+	public static final int NCOLS = 7;
+	public static final int NROWS = 3;
+	public static frogX;
+	public static frogY;
+	
+	public void run()
+	{
+		GImage frog = new GImage("frog.gif");
+		frogX = (NCOLS/2) * SQSIZE);
+		frogY = (NROWS) * SQSIZE);
+		add(frog, frogX, frogY);
+		addMouseListeners();
+	}
+	
+	public void mouseClicked(MouseEvent e)
+	{
+		double x = e.getX();
+		double y = e.getY();
+		if ((x-frogX)>(y-frogY)
+		{
+			if (frogX > 0 && < (NCOLS * SQSIZE))
+			{
+				frog.move(SQSIZE, 0);
+			}
+		}
+		else
+		{
+			if (frogY > 0 && < (NROWS *SQSIZE))
+			{
+				moveFrog(0, SQSIZE);
+			}
+		}
+	}
+
+******************************************************************************
+
+5. Strings and characters
+	
+	public string removeDoubledLetters(String word)
+	{
+		String newWord  = "";
+		for(int x = 0; x < word.length(); x++)
+		{
+			if (word.charAt(x) != word.charAt(x-1))
+			{
+				newWord += word.charAt(x);
+			}
+		}
+		return newWord;
+			
